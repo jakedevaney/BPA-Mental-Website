@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Home page style */
+
+.home-color {
+    background-color: #212121;
+}
+
+/* Navbar style */
+
+.navbar {
+    background-color: none;
+    height: 7.5vh;
+    border-bottom: 1px solid #313131;
+    display: flex;
+    align-items: center;
+}
+.menu-button {
+    margin-left: 1em;
+}
+
+.left {
+    width: 50vw;
+}
+
+.right {
+    width: 50vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Sidebar style */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 18vw;
+  background: #151515;
+  color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 2000;
+  border-right: 1px solid #313131;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+/* Chat style */
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    background-color: none;
+    justify-content: flex-end;
+    align-items: center;
+    height: 92.5vh;
+    transition: margin-left 0.3s ease-in-out;
+    margin-left: 0;
+}
+
+.chat-container.shifted {
+  margin-left: 9vw; /* Half of sidebar width */
+}
+
+.chat {
+    background-color: none;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    width: 60vw;
+    flex: 1 1 auto;              /* Allow chat to grow and shrink */
+    min-height: 0;               /* Prevent overflow issues */
+    overflow-y: auto;
+    padding: 1em;
+    height: auto;
+}
+
+.message {
+    color: white;
+    margin: 0.75em;
+}
+
+.pfp {
+    width: 3em;
+    height: 3em;
+    overflow: hidden;
+    margin-right: 0.75em;
+}
+
+/* input style */
+
+.input {
+    background-color: #424242;
+    width: 60vw;
+    border-radius: 1em;
+    margin: 0em 1em 1em 1em;
+    padding-left: 1em;
+    padding-right: .2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.input-input {
+    background: none;
+    width: 100%;
+    color: white;
+    margin: 1em 1em 1em 0em;
+    align-items: center;
+}
+
+.input-button {
+    border-style: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    max-width: none;
+    outline: none;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.yes-bg.input-button {
+    width: 3.5em;
+    height: 3.5em;
+    background-color: rgb(0, 139, 226);
+}
+
+.yes-bg.input-button:hover {
+  opacity: .75;
+  background-color: #007fc4;
+}
+
+.no-bg.input-button {
+    width: 2.2em;
+    height: 2.2em;
+}
+
+.no-bg.input-button:hover {
+  opacity: .75;
+  background-color: #929292;
+}
+
+#next-button {
+  margin-right: 0.3em;
+}
