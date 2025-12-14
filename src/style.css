@@ -4,32 +4,8 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
-/* Home page style */
-
-.home-color {
-    background-color: #212121;
+#root {
+    height: 100%;
 }
-
-/* Sidebar style */
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 18vw;
-  background: #151515;
-  color: white;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-  z-index: 2000;
-  border-right: 1px solid #313131;
-}
-
-.sidebar.active {
-  transform: translateX(0);
-}
-

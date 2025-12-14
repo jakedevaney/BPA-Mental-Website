@@ -4,6 +4,7 @@ import { auth } from "./firebase";
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -35,16 +36,23 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="h-screen flex flex-col overflow-hidden">
       <Navbar />
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/forums" element={<Forums />} />
-        <Route path="/help" element={<Help />} />
-      </Routes>
-    </>
+      <div className="flex-1 overflow-y-auto">
+        <div className="min-h-full flex flex-col">
+          <div className="flex-1">
+            <Routes>
+              <Route path="/home" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/forums" element={<Forums />} />
+              <Route path="/help" element={<Help />} />
+            </Routes>
+          </div>
+          <Footer />
+        </div>
+      </div>
+    </div>
   );
 }
 
