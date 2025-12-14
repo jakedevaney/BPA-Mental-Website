@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { FaUser } from "react-icons/fa";
+import { auth } from '../firebase';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
