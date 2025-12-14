@@ -1,18 +1,19 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBbAsvbV02mbDCW-U8QQpA7M9YjWEnwn9M",
-  authDomain: "chat-5f7a4.firebaseapp.com",
-  databaseURL: "https://chat-5f7a4-default-rtdb.firebaseio.com",
-  projectId: "chat-5f7a4",
-  storageBucket: "chat-5f7a4.firebasestorage.app",
-  messagingSenderId: "147097553155",
-  appId: "1:147097553155:web:af3d1acf9a5618e76cc136",
-  measurementId: "G-WRQWQC0456"
+  apiKey: "AIzaSyCqWGk_yZHz4rOsUj2J2oVMjz9LhX3Q-6A",
+  authDomain: "bpa-mental-health.firebaseapp.com",
+  projectId: "bpa-mental-health",
+  storageBucket: "bpa-mental-health.firebasestorage.app",
+  messagingSenderId: "478966953054",
+  appId: "1:478966953054:web:08a103e51c6f51e844b0cf"
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
-export const auth = getAuth()
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
