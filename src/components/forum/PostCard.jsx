@@ -22,7 +22,7 @@ const PostCard = ({ post, onClick }) => {
   return (
     <div
       onClick={onClick}
-      className="bg-gray-100 hover:bg-slate-750 border border-slate-700 rounded-lg p-6 cursor-pointer transition-all duration-200 hover:shadow-lg hover:border-slate-600"
+      className="bg-gray-100 hover:bg-slate-750 border-1 border-slate-700 rounded-lg p-6 cursor-pointer transition-all duration-200 hover:shadow-lg hover:border-slate-600"
     >
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1 min-w-0">

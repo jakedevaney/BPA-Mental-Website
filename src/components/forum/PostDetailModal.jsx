@@ -134,7 +134,7 @@ const PostDetailModal = ({ post, onClose }) => {
               value={newComment}
               onChange={(e) => setNewComment(e.target.value)}
               placeholder="Write a comment..."
-              className="flex-1 px-4 py-3 bg-gray-200 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-1 border-slate-700"
+              className="flex-1 px-4 py-3 bg-gray-200 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-1 border-gray-300"
               maxLength={1000}
             />
             <button
