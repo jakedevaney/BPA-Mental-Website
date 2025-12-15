@@ -6,10 +6,10 @@ const Navbar = () => {
 
   // Navigation items
   const navItems = [
-    { id: 'home', label: 'Home', href: 'BPA-Mental-Website' },
-    { id: 'counseling', label: 'Counseling', href: 'counseling' },
-    { id: 'forums', label: 'Forums', href: 'forums' },
-    { id: 'help', label: 'Help', href: 'help' },
+    { id: 'home', label: 'Home', href: 'BPA-Mental-Website/home' },
+    { id: 'counseling', label: 'Counseling', href: 'BPA-Mental-Website/counseling' },
+    { id: 'forums', label: 'Forums', href: 'BPA-Mental-Website/forums' },
+    { id: 'help', label: 'Help', href: 'BPA-Mental-Website/help' },
   ];
 
   return (
