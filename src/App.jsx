@@ -41,10 +41,11 @@ function App() {
         <div className="min-h-full flex flex-col">
           <div className="flex-1">
             <Routes>
-              <Route path="/BPA-Mental-Website" element={<Home />} />
-              <Route path="/forums" element={<Forums />} />
-              <Route path="/help" element={<Help />} />
-              <Route path="/counseling" element={<Counseling />} />
+              <Route path="/BPA-Mental-Website" element={<Navigate to="/BPA-Mental-Website/home" />} />
+              <Route path="/BPA-Mental-Website/home" element={<Home />} />
+              <Route path="/BPA-Mental-Website/forums" element={<Forums />} />
+              <Route path="/BPA-Mental-Website/help" element={<Help />} />
+              <Route path="/BPA-Mental-Website/counseling" element={<Counseling />} />
             </Routes>
           </div>
           <Footer />
