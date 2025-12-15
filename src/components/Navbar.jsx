@@ -1,25 +1,18 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaUser } from "react-icons/fa";
-import { auth } from '../firebase';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-// Navigation items
+  // Navigation items
   const navItems = [
     { id: 'home', label: 'Home', href: 'home' },
     { id: 'about', label: 'About', href: 'about' },
-    { id: 'services', label: 'Services', href: 'services' },
-    { id: 'contact', label: 'Contact', href: 'contact' },
+    { id: 'counseling', label: 'Counseling', href: 'counseling' },
     { id: 'forums', label: 'Forums', href: 'forums' },
+    { id: 'contact', label: 'Contact', href: 'contact' },
     { id: 'help', label: 'Help', href: 'help' },
   ];
-
-  const handleNavClick = (id) => {
-    setActiveTab(id);
-    setIsOpen(false);
-  };
 
   return (
     <nav className="bg-slate-900 shadow-lg">
@@ -27,7 +20,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-white">Logo</h1>
+            <h1 className="text-2xl font-bold text-white">Mental Health</h1>
           </div>
 
           {/* Desktop Navigation */}
@@ -35,20 +28,20 @@ const Navbar = () => {
             <div className="ml-10 flex items-center space-x-4">
               {navItems.map((item) => (
                 <NavLink
-                    key={item.id}
-                    to={`/${item.href}`}
-                    className={({ isActive }) =>
+                  key={item.id}
+                  to={`/${item.href}`}
+                  className={({ isActive }) =>
                     `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                        isActive
-                            ? "bg-slate-700 text-white"
-                            : "text-gray-300 hover:bg-slate-800 hover:text-white"
-                        }`
-                    }
-                    onClick={() => setIsOpen(false)}
+                      isActive
+                        ? "bg-slate-700 text-white"
+                        : "text-gray-300 hover:bg-slate-800 hover:text-white"
+                    }`
+                  }
+                  onClick={() => setIsOpen(false)}
                 >
-                    {item.label}
+                  {item.label}
                 </NavLink>
-                ))}
+              ))}
             </div>
           </div>
 
@@ -75,26 +68,26 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
-                <NavLink
+              <NavLink
                 key={item.id}
                 to={`/${item.href}`}
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                    `block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                  `block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                     isActive
-                        ? "bg-slate-700 text-white"
-                        : "text-gray-300 hover:bg-slate-800 hover:text-white"
-                    }`
+                      ? "bg-slate-700 text-white"
+                      : "text-gray-300 hover:bg-slate-800 hover:text-white"
+                  }`
                 }
-                >
+              >
                 {item.label}
-                </NavLink>
+              </NavLink>
             ))}
-            </div>
+          </div>
         </div>
-        )}
+      )}
     </nav>
   );
 };

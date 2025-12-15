@@ -47,7 +47,7 @@ const CreatePostModal = ({ onClose, onSubmit }) => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="What's on your mind?"
-              className="w-full px-4 py-3 bg-gray-200 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-1 border-slate-700"
+              className="w-full px-4 py-3 bg-gray-200 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-1 border-gray-300"
               maxLength={200}
               required
             />
@@ -64,7 +64,7 @@ const CreatePostModal = ({ onClose, onSubmit }) => {
               value={content}
               onChange={(e) => setContent(e.target.value)}
               placeholder="Share your thoughts in detail..."
-              className="w-full px-4 py-3 bg-gray-200 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[200px] resize-y border-1 border-slate-700"
+              className="w-full px-4 py-3 bg-gray-200 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[200px] resize-y border-1 border-gray-300"
               maxLength={5000}
               required
             />

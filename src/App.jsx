@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Forums from "./pages/Forums";
 import Help from "./pages/Help";
+import Counseling from "./pages/Counseling";
 
 import { generateUsername } from "./utils/username";
 
@@ -47,6 +48,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/forums" element={<Forums />} />
               <Route path="/help" element={<Help />} />
+              <Route path="/counseling" element={<Counseling />} />
             </Routes>
           </div>
           <Footer />

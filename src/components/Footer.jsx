@@ -78,16 +78,16 @@ const Footer = () => {
               Follow us on social media for updates and support.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/bpaconnect/" className="text-gray-400 hover:text-white transition-colors">
                 <FaFacebook size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a target="_blank" rel="noopener noreferrer" href="https://x.com/BPAconnect" className="text-gray-400 hover:text-white transition-colors">
                 <FaTwitter size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/bpaconnect/?hl=en" className="text-gray-400 hover:text-white transition-colors">
                 <FaInstagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/jakedevaney/BPA-Mental-Website" className="text-gray-400 hover:text-white transition-colors">
                 <FaGithub size={20} />
               </a>
             </div>
@@ -101,7 +101,7 @@ const Footer = () => {
               © {currentYear} Mental Health Support. All rights reserved.
             </p>
             <div className="flex items-center gap-1 text-gray-400 text-sm">
-              Made with <FaHeart className="text-red-500 mx-1" size={14} /> for BPA Competition
+              Made for BPA Web Design Competition
             </div>
           </div>
           <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-4 text-xs text-gray-500">

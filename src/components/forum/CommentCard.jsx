@@ -20,7 +20,7 @@ const CommentCard = ({ comment }) => {
   };
 
   return (
-    <div className="bg-gray-300 rounded-lg p-4 hover:bg-slate-850 transition-colors">
+    <div className="bg-gray-300 rounded-lg p-4 hover:bg-slate-850 transition-colors border-1 border-gray-400">
       <div className="flex items-center gap-3 mb-2">
         <div className="flex items-center gap-2 text-sm text-black font-semibold">
           <FaUser size={12} />
