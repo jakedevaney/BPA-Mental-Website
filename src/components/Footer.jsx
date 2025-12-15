@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-xl font-bold text-white mb-3">Mental Health Support</h3>
+            <h3 className="text-xl font-bold text-white mb-3">SafeSpace</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               A safe space for mental health support, resources, and community connection.
             </p>
@@ -22,7 +22,7 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-3">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/home" className="text-gray-400 hover:text-white text-sm transition-colors">
+                <Link to="/BPA-Mental-Website" className="text-gray-400 hover:text-white text-sm transition-colors">
                   Home
                 </Link>
               </li>
@@ -98,7 +98,7 @@ const Footer = () => {
         <div className="mt-8 pt-6 border-t border-slate-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              © {currentYear} Mental Health Support. All rights reserved.
+              © {currentYear} SafeSpace. All rights reserved.
             </p>
             <div className="flex items-center gap-1 text-gray-400 text-sm">
               Made for BPA Web Design Competition

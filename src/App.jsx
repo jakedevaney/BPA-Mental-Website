@@ -43,8 +43,7 @@ function App() {
         <div className="min-h-full flex flex-col">
           <div className="flex-1">
             <Routes>
-              <Route path="/" element={<Navigate to="/home" />} />
-              <Route path="/home" element={<Home />} />
+              <Route path="/BPA-Mental-Website/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/forums" element={<Forums />} />
