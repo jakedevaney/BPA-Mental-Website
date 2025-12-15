@@ -6,8 +6,6 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
 import Forums from "./pages/Forums";
 import Help from "./pages/Help";
 import Counseling from "./pages/Counseling";
@@ -43,10 +41,7 @@ function App() {
         <div className="min-h-full flex flex-col">
           <div className="flex-1">
             <Routes>
-              <Route path="/" element={<Navigate to="/home" />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/BPA-Mental-Website/" element={<Home />} />
               <Route path="/forums" element={<Forums />} />
               <Route path="/help" element={<Help />} />
               <Route path="/counseling" element={<Counseling />} />

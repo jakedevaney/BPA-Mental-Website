@@ -6,11 +6,9 @@ const Navbar = () => {
 
   // Navigation items
   const navItems = [
-    { id: 'home', label: 'Home', href: 'home' },
-    { id: 'about', label: 'About', href: 'about' },
+    { id: 'home', label: 'Home', href: 'BPA-Mental-Website' },
     { id: 'counseling', label: 'Counseling', href: 'counseling' },
     { id: 'forums', label: 'Forums', href: 'forums' },
-    { id: 'contact', label: 'Contact', href: 'contact' },
     { id: 'help', label: 'Help', href: 'help' },
   ];
 
@@ -20,7 +18,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-white">Mental Health</h1>
+            <h1 className="text-2xl font-bold text-white">SafeSpace</h1>
           </div>
 
           {/* Desktop Navigation */}
