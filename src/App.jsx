@@ -41,7 +41,7 @@ function App() {
         <div className="min-h-full flex flex-col">
           <div className="flex-1">
             <Routes>
-              <Route path="/BPA-Mental-Website/" element={<Home />} />
+              <Route path="/BPA-Mental-Website" element={<Home />} />
               <Route path="/forums" element={<Forums />} />
               <Route path="/help" element={<Help />} />
               <Route path="/counseling" element={<Counseling />} />
