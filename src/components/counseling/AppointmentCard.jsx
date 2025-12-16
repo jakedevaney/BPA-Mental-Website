@@ -51,22 +51,22 @@ const AppointmentCard = ({ appointment }) => {
   const past = isPastAppointment();
 
   return (
-    <div className={`rounded-lg p-4 border-2 ${
+    <div className={`rounded-lg p-4 border ${
       past 
-        ? 'bg-gray-900 bg-opacity-50 border-slate-700 opacity-60' 
-        : 'bg-slate-750 border-slate-700'
+        ? 'bg-[#7FA97F] bg-opacity-20 border-[#7FA97F] opacity-60' 
+        : 'bg-[#AEE3CF] bg-opacity-20 border-[#7FA97F]'
     }`}>
       <div className="flex justify-between items-start mb-2">
         <div className="flex-1">
-          <div className="flex items-center gap-2 text-black text-sm font-bold mb-1">
+          <div className="flex items-center gap-2 text-[#2F5D73] text-sm font-bold mb-1">
             <FaUserMd size={12} />
             <span className="font-medium">{appointment.counselorName}</span>
           </div>
-          <div className="flex items-center gap-2 text-gray-500 text-sm mb-1">
+          <div className="flex items-center gap-2 text-[#7FA97F] text-sm mb-1">
             <FaCalendarAlt size={12} />
             <span>{formatDate(appointment.date)}</span>
           </div>
-          <div className="flex items-center gap-2 text-gray-500 text-sm">
+          <div className="flex items-center gap-2 text-[#7FA97F] text-sm">
             <FaClock size={12} />
             <span>{appointment.time}</span>
           </div>
@@ -75,7 +75,7 @@ const AppointmentCard = ({ appointment }) => {
           <button
             onClick={handleDelete}
             disabled={isDeleting}
-            className="text-red-400 hover:text-red-300 transition-colors disabled:opacity-50"
+            className="text-red-600 hover:text-red-800 transition-colors disabled:opacity-50"
             title="Cancel appointment"
           >
             <FaTrash size={14} />
@@ -84,13 +84,13 @@ const AppointmentCard = ({ appointment }) => {
       </div>
       
       {past && (
-        <div className="mt-2 text-xs text-gray-500 italic">
+        <div className="mt-2 text-xs text-[#7FA97F] italic">
           Past appointment
         </div>
       )}
       
-      <div className="mt-2 pt-2 border-t border-slate-700">
-        <p className="text-gray-400 text-xs line-clamp-2">
+      <div className="mt-2 pt-2 border-t border-[#7FA97F]">
+        <p className="text-[#2F5D73] text-xs line-clamp-2">
           {appointment.reason}
         </p>
       </div>
@@ -98,8 +98,8 @@ const AppointmentCard = ({ appointment }) => {
       <div className="mt-2">
         <span className={`text-xs px-2 py-1 rounded ${
           past
-            ? 'bg-gray-700 text-gray-400'
-            : 'bg-green-900 bg-opacity-30 text-green-400'
+            ? 'bg-[#7FA97F] bg-opacity-30 text-[#2F5D73]'
+            : 'bg-[#7FA97F] bg-opacity-50 text-[#F7FAF9]'
         }`}>
           {past ? 'Completed' : 'Scheduled'}
         </span>

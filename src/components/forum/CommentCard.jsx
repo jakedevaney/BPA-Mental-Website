@@ -20,18 +20,18 @@ const CommentCard = ({ comment }) => {
   };
 
   return (
-    <div className="bg-gray-300 rounded-lg p-4 hover:bg-slate-850 transition-colors border-1 border-gray-400">
+    <div className="bg-[#AEE3CF] bg-opacity-30 rounded-lg p-4 hover:bg-[#AEE3CF] hover:bg-opacity-40 transition-colors border border-[#7FA97F]">
       <div className="flex items-center gap-3 mb-2">
-        <div className="flex items-center gap-2 text-sm text-black font-semibold">
+        <div className="flex items-center gap-2 text-sm text-[#2F5D73] font-semibold">
           <FaUser size={12} />
-          <span className="font-semibold text-black">{comment.author}</span>
+          <span className="font-semibold">{comment.author}</span>
         </div>
-        <div className="flex items-center gap-1 text-xs text-gray-400">
+        <div className="flex items-center gap-1 text-xs text-[#7FA97F]">
           <FaClock size={10} />
           <span>{formatDate(comment.createdAt)}</span>
         </div>
       </div>
-      <p className="text-gray-800 leading-relaxed">
+      <p className="text-[#2F5D73] leading-relaxed">
         {comment.content}
       </p>
     </div>

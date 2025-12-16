@@ -87,27 +87,27 @@ const Home = () => {
   ];
 
   return (
-    <div className="bg-gray-200">
+    <div className="bg-[#F7FAF9]">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-blue-900 to-purple-900 py-20">
+      <div className="relative py-50 bg-[url('/BPA-Mental-Website/src/images/banner1.svg')] bg-cover bg-center bg-no-repeat">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-[#F7FAF9] mb-6 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
               You Are Not Alone
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-[#AEE3CF] mb-8 max-w-3xl mx-auto drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
               A safe space for mental health support, resources, and healing. Your journey to wellness starts here.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link to="/counseling" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-lg transition-colors flex items-center gap-2">
+              <Link to="/counseling" className="px-8 py-4 bg-[#4F8EA3] hover:bg-[#2F5D73] text-[#F7FAF9] rounded-lg font-semibold text-lg transition-colors flex items-center gap-2">
                 <FaCalendarAlt />
                 Schedule Counseling
               </Link>
-              <Link to="/forums" className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold text-lg transition-colors flex items-center gap-2">
+              <Link to="/forums" className="px-8 py-4 bg-[#7FA97F] hover:bg-[#2F5D73] text-[#F7FAF9] rounded-lg font-semibold text-lg transition-colors flex items-center gap-2">
                 <FaComments />
                 Join Community
               </Link>
-              <Link to="/help" className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white rounded-lg font-semibold text-lg transition-colors">
+              <Link to="/help" className="px-8 py-4 bg-red-600 hover:bg-red-700 text-[#F7FAF9] rounded-lg font-semibold text-lg transition-colors">
                 Get Help Now
               </Link>
             </div>
@@ -116,15 +116,15 @@ const Home = () => {
       </div>
 
       {/* Statistics Section */}
-      <div className="py-12 bg-slate-950">
+      <div className="py-12 bg-[#2F5D73]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-[#AEE3CF] mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-400 text-sm md:text-base">
+                <div className="text-[#F7FAF9] text-sm md:text-base">
                   {stat.label}
                 </div>
               </div>
@@ -137,38 +137,38 @@ const Home = () => {
       <div className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-black mb-4">Understanding Mental Health</h2>
-            <p className="text-gray-500 text-lg max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-[#2F5D73] mb-4">Understanding Mental Health</h2>
+            <p className="text-[#7FA97F] text-lg max-w-3xl mx-auto">
               Mental health disorders are common, treatable conditions. Understanding them is the first step toward healing.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {mentalHealthDisorders.map((disorder, index) => (
-              <div key={index} className="bg-gray-100 rounded-lg p-6 hover:shadow-xl transition-shadow border border-slate-700">
+              <div key={index} className="bg-white rounded-lg p-6 hover:shadow-xl transition-shadow border border-[#AEE3CF]">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="text-3xl text-blue-500">
+                  <div className="text-3xl text-[#4F8EA3]">
                     {disorder.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-black">{disorder.name}</h3>
+                  <h3 className="text-2xl font-bold text-[#2F5D73]">{disorder.name}</h3>
                 </div>
-                <p className="text-gray-500 mb-4">{disorder.description}</p>
+                <p className="text-[#7FA97F] mb-4">{disorder.description}</p>
                 
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-500 mb-2">Common Symptoms:</h4>
+                  <h4 className="text-sm font-semibold text-[#2F5D73] mb-2">Common Symptoms:</h4>
                   <ul className="space-y-1">
                     {disorder.symptoms.map((symptom, idx) => (
-                      <li key={idx} className="text-sm text-gray-400 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                      <li key={idx} className="text-sm text-[#7FA97F] flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 bg-[#4F8EA3] rounded-full"></span>
                         {symptom}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="pt-4 border-t border-slate-700">
-                  <p className="text-xs text-gray-500">
-                    <strong className="text-blue-400">Prevalence:</strong> {disorder.prevalence}
+                <div className="pt-4 border-t border-[#AEE3CF]">
+                  <p className="text-xs text-[#7FA97F]">
+                    <strong className="text-[#4F8EA3]">Prevalence:</strong> {disorder.prevalence}
                   </p>
                 </div>
               </div>
@@ -178,28 +178,28 @@ const Home = () => {
       </div>
 
       {/* Testimonials Section */}
-      <div className="py-16 px-4 bg-slate-950">
+      <div className="py-16 px-4 bg-[#2F5D73]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Stories of Hope</h2>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-[#F7FAF9] mb-4">Stories of Hope</h2>
+            <p className="text-[#AEE3CF] text-lg max-w-3xl mx-auto">
               Real stories from real people who found their path to recovery and wellness.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800 rounded-lg p-8 relative hover:shadow-xl transition-shadow border border-slate-700">
-                <FaQuoteLeft className="text-4xl text-blue-500 opacity-20 absolute top-4 left-4" />
+              <div key={index} className="bg-[#4F8EA3] rounded-lg p-8 relative hover:shadow-xl transition-shadow border border-[#7FA97F]">
+                <FaQuoteLeft className="text-4xl text-[#AEE3CF] opacity-20 absolute top-4 left-4" />
                 <div className="relative z-10">
                   <div className="mb-4">
-                    <h3 className="text-xl font-bold text-white mb-1">{testimonial.name}</h3>
-                    <p className="text-sm text-gray-400">{testimonial.age} years old • {testimonial.location}</p>
-                    <span className="inline-block mt-2 px-3 py-1 bg-purple-900 bg-opacity-30 text-purple-400 text-xs rounded-full">
+                    <h3 className="text-xl font-bold text-[#F7FAF9] mb-1">{testimonial.name}</h3>
+                    <p className="text-sm text-[#AEE3CF]">{testimonial.age} years old • {testimonial.location}</p>
+                    <span className="inline-block mt-2 px-3 py-1 bg-[#7FA97F] bg-opacity-40 text-[#F7FAF9] text-xs rounded-full">
                       {testimonial.condition}
                     </span>
                   </div>
-                  <p className="text-gray-300 leading-relaxed italic">
+                  <p className="text-[#F7FAF9] leading-relaxed italic">
                     "{testimonial.story}"
                   </p>
                 </div>
@@ -211,19 +211,19 @@ const Home = () => {
 
       {/* Call to Action */}
       <div className="py-16 px-4">
-        <div className="max-w-4xl mx-auto bg-gradient-to-r from-blue-900 to-purple-900 rounded-lg p-12 text-center">
-          <FaUsers className="text-5xl text-white mx-auto mb-6" />
-          <h2 className="text-3xl font-bold text-white mb-4">
+        <div className="max-w-4xl mx-auto bg-gradient-to-r from-[#2F5D73] to-[#4F8EA3] rounded-lg p-12 text-center">
+          <FaUsers className="text-5xl text-[#AEE3CF] mx-auto mb-6" />
+          <h2 className="text-3xl font-bold text-[#F7FAF9] mb-4">
             Take the First Step Today
           </h2>
-          <p className="text-gray-200 text-lg mb-8">
+          <p className="text-[#AEE3CF] text-lg mb-8">
             Whether you need immediate support, want to connect with others, or schedule professional counseling, we're here for you.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link to="/help" className="px-8 py-4 bg-white text-blue-900 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link to="/help" className="px-8 py-4 bg-[#F7FAF9] text-[#2F5D73] rounded-lg font-semibold hover:bg-[#AEE3CF] transition-colors">
               Crisis Resources
             </Link>
-            <Link to="/forums" className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+            <Link to="/forums" className="px-8 py-4 bg-transparent border-2 border-[#F7FAF9] text-[#F7FAF9] rounded-lg font-semibold hover:bg-[#F7FAF9] hover:text-[#2F5D73] transition-colors">
               Join Forums
             </Link>
           </div>

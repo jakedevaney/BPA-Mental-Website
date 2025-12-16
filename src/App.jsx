@@ -5,6 +5,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import Forums from "./pages/Forums";
 import Help from "./pages/Help";
@@ -37,14 +38,16 @@ function App() {
   return (
     <div className="h-screen flex flex-col overflow-hidden">
       <Navbar />
+      <ScrollToTop />
       <div className="flex-1 overflow-y-auto">
         <div className="min-h-full flex flex-col">
           <div className="flex-1">
             <Routes>
-              <Route path="/BPA-Mental-Website/" element={<Home />} />
+              <Route path="/" element={<Home />} />
               <Route path="/forums" element={<Forums />} />
               <Route path="/help" element={<Help />} />
               <Route path="/counseling" element={<Counseling />} />
+              <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </div>
           <Footer />

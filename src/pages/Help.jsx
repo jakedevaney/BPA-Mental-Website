@@ -103,12 +103,12 @@ const Help = () => {
   };
 
   return (
-    <div className="bg-gray-200 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="bg-[#F7FAF9] min-h-screen pb-8">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-black mb-3">Get Help Now</h1>
-          <p className="text-gray-500 text-lg">You're not alone. Help is available 24/7.</p>
+        <div className="relative mb-8 py-60 bg-[url('/BPA-Mental-Website/src/images/banner2.svg')] bg-cover bg-center bg-no-repeat left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen border-b-2 border-[#AEE3CF]">
+          <h1 className="text-6xl font-bold text-[#F7FAF9] mb-3 text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Get Help Now</h1>
+          <p className="text-[#AEE3CF] text-lg text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">You're not alone. Help is available 24/7.</p>
         </div>
 
         {/* Emergency Warning */}
@@ -133,23 +133,23 @@ const Help = () => {
         {/* National Helplines */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <FaPhone className="text-blue-500 text-2xl" />
-            <h2 className="text-3xl font-bold text-black">National Helplines</h2>
+            <FaPhone className="text-[#4F8EA3] text-2xl" />
+            <h2 className="text-3xl font-bold text-[#2F5D73]">National Helplines</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {nationalHelplines.map((helpline, index) => (
-              <div key={index} className="bg-gray-100 rounded-lg p-6 hover:bg-slate-750 transition-colors border border-slate-700">
+              <div key={index} className="bg-white rounded-lg p-6 hover:shadow-xl transition-all border border-[#AEE3CF]">
                 <div className="flex items-start gap-4">
-                  <div className="text-blue-500 text-2xl flex-shrink-0">
+                  <div className="text-[#4F8EA3] text-2xl flex-shrink-0">
                     {helpline.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-600 mb-2">{helpline.name}</h3>
-                    <a href={`tel:${helpline.phone.replace(/[^0-9]/g, '')}`} className="text-2xl font-bold text-blue-400 hover:text-blue-300 mb-3 block">
+                    <h3 className="text-xl font-semibold text-[#2F5D73] mb-2">{helpline.name}</h3>
+                    <a href={`tel:${helpline.phone.replace(/[^0-9]/g, '')}`} className="text-2xl font-bold text-[#4F8EA3] hover:text-[#2F5D73] mb-3 block">
                       {helpline.phone}
                     </a>
-                    <p className="text-gray-500 mb-3">{helpline.description}</p>
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+                    <p className="text-[#7FA97F] mb-3">{helpline.description}</p>
+                    <div className="flex flex-wrap gap-4 text-sm text-[#7FA97F]">
                       <div className="flex items-center gap-1">
                         <FaClock size={14} />
                         <span>{helpline.hours}</span>
@@ -169,24 +169,24 @@ const Help = () => {
         {/* Online Resources */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <FaGlobe className="text-purple-500 text-2xl" />
-            <h2 className="text-3xl font-bold text-black">Online Resources</h2>
+            <FaGlobe className="text-[#7FA97F] text-2xl" />
+            <h2 className="text-3xl font-bold text-[#2F5D73]">Online Resources</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {onlineResources.map((resource, index) => (
-              <div key={index} className="bg-gray-100 rounded-lg p-6 hover:bg-slate-750 transition-colors border border-slate-700">
+              <div key={index} className="bg-white rounded-lg p-6 hover:shadow-xl transition-all border border-[#AEE3CF]">
                 <div className="mb-3">
-                  <span className="px-3 py-1 bg-purple-900 bg-opacity-30 text-purple-400 text-xs rounded-full">
+                  <span className="px-3 py-1 bg-[#7FA97F] bg-opacity-30 text-[#2F5D73] text-xs rounded-full font-medium">
                     {resource.type}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold text-black mb-2">{resource.name}</h3>
-                <p className="text-gray-500 mb-4 text-sm">{resource.description}</p>
+                <h3 className="text-lg font-semibold text-[#2F5D73] mb-2">{resource.name}</h3>
+                <p className="text-[#7FA97F] mb-4 text-sm">{resource.description}</p>
                 <a 
                   href={`https://${resource.url}`} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-purple-400 hover:text-purple-300 text-sm font-medium flex items-center gap-1"
+                  className="text-[#4F8EA3] hover:text-[#2F5D73] text-sm font-medium flex items-center gap-1"
                 >
                   Visit Website →
                 </a>
@@ -196,26 +196,26 @@ const Help = () => {
         </div>
 
         {/* Additional Support */}
-        <div className="bg-gradient-to-r from-blue-900 to-purple-900 bg-opacity-20 rounded-lg p-8 border border-blue-800">
+        <div className="bg-gradient-to-r from-[#2F5D73] to-[#4F8EA3] bg-opacity-20 rounded-lg p-8 border border-[#AEE3CF]">
           <div className="flex items-start gap-4">
-            <FaHeart className="text-pink-500 text-3xl flex-shrink-0" />
+            <FaHeart className="text-[#AEE3CF] text-3xl flex-shrink-0" />
             <div>
-              <h2 className="text-2xl font-bold text-white mb-3">Remember</h2>
-              <ul className="space-y-2 text-gray-300">
+              <h2 className="text-2xl font-bold text-[#F7FAF9] mb-3">Remember</h2>
+              <ul className="space-y-2 text-[#F7FAF9]">
                 <li className="flex items-start gap-2">
-                  <span className="text-pink-500 mt-1">•</span>
+                  <span className="text-[#AEE3CF] mt-1">•</span>
                   <span>Seeking help is a sign of strength, not weakness</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-pink-500 mt-1">•</span>
+                  <span className="text-[#AEE3CF] mt-1">•</span>
                   <span>Recovery is possible, and people do get better</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-pink-500 mt-1">•</span>
+                  <span className="text-[#AEE3CF] mt-1">•</span>
                   <span>You deserve support and don't have to face this alone</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-pink-500 mt-1">•</span>
+                  <span className="text-[#AEE3CF] mt-1">•</span>
                   <span>Treatment and support can help you live a full and meaningful life</span>
                 </li>
               </ul>

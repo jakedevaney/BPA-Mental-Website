@@ -130,73 +130,73 @@ const Counseling = () => {
   };
 
   return (
-    <div className="bg-gray-200 min-h-screen">
+    <div className="bg-[#F7FAF9] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-black mb-2">Online Counseling</h1>
-          <p className="text-gray-600">Schedule an appointment with one of our licensed counselors</p>
+          <h1 className="text-3xl font-bold text-[#2F5D73] mb-2">Online Counseling</h1>
+          <p className="text-[#7FA97F]">Schedule an appointment with one of our licensed counselors</p>
         </div>
 
         {/* Success Message */}
         {showSuccess && (
-          <div className="mb-6 bg-green-900 bg-opacity-20 border border-green-800 rounded-lg p-4 flex items-center gap-3">
-            <FaCheckCircle className="text-green-500 text-xl" />
-            <p className="text-green-300">Appointment scheduled successfully!</p>
+          <div className="mb-6 bg-[#7FA97F] bg-opacity-20 border border-[#7FA97F] rounded-lg p-4 flex items-center gap-3">
+            <FaCheckCircle className="text-[#7FA97F] text-xl" />
+            <p className="text-[#2F5D73]">Appointment scheduled successfully!</p>
           </div>
         )}
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Booking Form */}
           <div className="lg:col-span-2">
-            <div className="bg-gray-100 rounded-lg p-6 border-1 border-slate-700">
-              <h2 className="text-xl font-semibold text-black mb-6">Schedule New Appointment</h2>
+            <div className="bg-white rounded-lg p-6 border border-[#AEE3CF]">
+              <h2 className="text-xl font-semibold text-[#2F5D73] mb-6">Schedule New Appointment</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Counselor Selection */}
                 <div>
-                <label className="block text-gray-600 font-medium mb-2">
+                  <label className="block text-[#2F5D73] font-medium mb-2">
                     <FaUserMd className="inline mr-2" />
                     Select Counselor
-                </label>
+                  </label>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {counselors.map((counselor) => {
-                    const isSelected = selectedCounselor === counselor.id;
+                      const isSelected = selectedCounselor === counselor.id;
 
-                    return (
+                      return (
                         <div
-                        key={counselor.id}
-                        onClick={() => setSelectedCounselor(counselor.id)}
-                        className={`
+                          key={counselor.id}
+                          onClick={() => setSelectedCounselor(counselor.id)}
+                          className={`
                             p-4 rounded-lg border-2 cursor-pointer
                             transition-all duration-200
                             ${isSelected
-                            ? 'border-blue-500 bg-blue-900 bg-opacity-20 text-white'
-                            : 'border-slate-700 bg-gray-200 text-black hover:border-slate-600'
+                              ? 'border-[#4F8EA3] bg-[#4F8EA3] bg-opacity-20 text-[#2F5D73]'
+                              : 'border-[#AEE3CF] bg-[#F7FAF9] text-[#2F5D73] hover:border-[#7FA97F]'
                             }
-                        `}
+                          `}
                         >
-                        <h3 className="font-medium transition-colors duration-200">
+                          <h3 className="font-medium transition-colors duration-200">
                             {counselor.name}
-                        </h3>
-                        <p
+                          </h3>
+                          <p
                             className={`
-                            text-sm transition-colors duration-200
-                            ${isSelected ? 'text-gray-300' : 'text-gray-400'}
+                              text-sm transition-colors duration-200
+                              ${isSelected ? 'text-[#2F5D73]' : 'text-[#7FA97F]'}
                             `}
-                        >
+                          >
                             {counselor.specialty}
-                        </p>
+                          </p>
                         </div>
-                    );
+                      );
                     })}
-                </div>
+                  </div>
                 </div>
 
                 {/* Date Selection */}
                 <div>
-                  <label className="block text-gray-600 font-medium mb-2">
+                  <label className="block text-[#2F5D73] font-medium mb-2">
                     <FaCalendarAlt className="inline mr-2" />
                     Select Date
                   </label>
@@ -206,7 +206,7 @@ const Counseling = () => {
                       setSelectedDate(e.target.value);
                       setSelectedTime('');
                     }}
-                    className="w-full px-4 py-3 bg-gray-200 text-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-1 border-gray-300"
+                    className="w-full px-4 py-3 bg-[#F7FAF9] text-[#7FA97F] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4F8EA3] border border-[#AEE3CF]"
                     required
                   >
                     <option value="">Choose a date...</option>
@@ -220,14 +220,14 @@ const Counseling = () => {
 
                 {/* Time Selection */}
                 <div>
-                  <label className="block text-gray-600 font-medium mb-2">
+                  <label className="block text-[#2F5D73] font-medium mb-2">
                     <FaClock className="inline mr-2" />
                     Select Time
                   </label>
                   {!selectedDate || !selectedCounselor ? (
-                    <p className="text-gray-300 text-sm">Please select a counselor and date first</p>
+                    <p className="text-[#7FA97F] text-sm">Please select a counselor and date first</p>
                   ) : availableSlots.length === 0 ? (
-                    <p className="text-yellow-500 text-sm">No available slots for this date</p>
+                    <p className="text-[#7FA97F] text-sm">No available slots for this date</p>
                   ) : (
                     <div className="grid grid-cols-3 md:grid-cols-4 gap-2">
                       {availableSlots.map(time => (
@@ -235,10 +235,10 @@ const Counseling = () => {
                           key={time}
                           type="button"
                           onClick={() => setSelectedTime(time)}
-                          className={`px-3 py-2 rounded-lg text-sm font-medium border-1 border-slate-700 transition-all ${
+                          className={`px-3 py-2 rounded-lg text-sm font-medium border transition-all ${
                             selectedTime === time
-                              ? 'bg-blue-600 text-white'
-                              : 'bg-slate-200 text-gray-500 hover:bg-slate-300'
+                              ? 'bg-[#4F8EA3] text-[#F7FAF9] border-[#4F8EA3]'
+                              : 'bg-[#F7FAF9] text-[#7FA97F] border-[#AEE3CF] hover:bg-[#AEE3CF]'
                           }`}
                         >
                           {time}
@@ -250,18 +250,18 @@ const Counseling = () => {
 
                 {/* Reason */}
                 <div>
-                  <label className="block text-gray-600 font-medium mb-2">
+                  <label className="block text-[#2F5D73] font-medium mb-2">
                     Reason for Visit
                   </label>
                   <textarea
                     value={reason}
                     onChange={(e) => setReason(e.target.value)}
                     placeholder="Please describe what you'd like to discuss..."
-                    className="w-full px-4 py-3 bg-gray-200 text-black placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[120px] resize-y border-1 border-gray-300"
+                    className="w-full px-4 py-3 bg-[#F7FAF9] text-[#2F5D73] placeholder-[#7FA97F] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4F8EA3] min-h-[120px] resize-y border border-[#AEE3CF]"
                     maxLength={500}
                     required
                   />
-                  <div className="text-right text-sm text-gray-500 mt-1">
+                  <div className="text-right text-sm text-[#7FA97F] mt-1">
                     {reason.length}/500
                   </div>
                 </div>
@@ -270,7 +270,7 @@ const Counseling = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting || !selectedDate || !selectedTime || !selectedCounselor || !reason.trim()}
-                  className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+                  className="w-full px-6 py-3 bg-[#4F8EA3] hover:bg-[#2F5D73] text-[#F7FAF9] rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
                 >
                   {isSubmitting ? 'Scheduling...' : 'Schedule Appointment'}
                 </button>
@@ -280,13 +280,13 @@ const Counseling = () => {
 
           {/* My Appointments Sidebar */}
           <div className="lg:col-span-1">
-            <div className="bg-gray-100 rounded-lg p-6 border-1 border-slate-700">
-              <h2 className="text-xl font-semibold text-black mb-4">My Appointments</h2>
+            <div className="bg-white rounded-lg p-6 border border-[#AEE3CF]">
+              <h2 className="text-xl font-semibold text-[#2F5D73] mb-4">My Appointments</h2>
               
               {myAppointments.length === 0 ? (
                 <div className="text-center py-8">
-                  <FaCalendarAlt className="mx-auto text-4xl text-gray-600 mb-3" />
-                  <p className="text-gray-400 text-sm">No appointments scheduled</p>
+                  <FaCalendarAlt className="mx-auto text-4xl text-[#7FA97F] mb-3" />
+                  <p className="text-[#7FA97F] text-sm">No appointments scheduled</p>
                 </div>
               ) : (
                 <div className="space-y-3">
