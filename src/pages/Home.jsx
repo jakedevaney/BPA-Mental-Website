@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaBrain, FaHeart, FaUsers, FaHandHoldingHeart, FaComments, FaCalendarAlt, FaQuoteLeft } from 'react-icons/fa';
+import bannerImage from '../images/banner1.svg';
 
 const Home = () => {
   const mentalHealthDisorders = [
@@ -89,7 +90,10 @@ const Home = () => {
   return (
     <div className="bg-[#F7FAF9]">
       {/* Hero Section */}
-      <div className="relative py-50 bg-[url('/BPA-Mental-Website/src/images/banner1.svg')] bg-cover bg-center bg-no-repeat">
+      <div className="relative py-50 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${bannerImage})`
+      }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-[#F7FAF9] mb-6 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">

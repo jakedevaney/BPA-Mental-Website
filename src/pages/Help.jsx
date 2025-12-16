@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPhone, FaComments, FaExclamationTriangle, FaGlobe, FaMapMarkerAlt, FaClock, FaHeart } from 'react-icons/fa';
+import bannerImage from '../images/banner2.svg';
 
 const Help = () => {
   const nationalHelplines = [
@@ -106,7 +107,10 @@ const Help = () => {
     <div className="bg-[#F7FAF9] min-h-screen pb-8">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="relative mb-8 py-60 bg-[url('/BPA-Mental-Website/src/images/banner2.svg')] bg-cover bg-center bg-no-repeat left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen border-b-2 border-[#AEE3CF]">
+        <div className="relative mb-8 py-60 bg-cover bg-center bg-no-repeat left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen border-b-2 border-[#AEE3CF]" 
+        style={{
+            backgroundImage: `url(${bannerImage})`
+        }}>
           <h1 className="text-6xl font-bold text-[#F7FAF9] mb-3 text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Get Help Now</h1>
           <p className="text-[#AEE3CF] text-lg text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">You're not alone. Help is available 24/7.</p>
         </div>

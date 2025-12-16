@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../images/logo.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-2xl font-bold text-[#AEE3CF]">
-              <img src="/BPA-Mental-Website/src/images/logo.svg" alt="GrowWell Foundation" className="h-20 w-20 inline-block mr-2" />
+              <img src={logo} alt="GrowWell Foundation" className="h-20 w-20 inline-block mr-2" />
               GrowWell Foundation
             </h1>
           </div>
