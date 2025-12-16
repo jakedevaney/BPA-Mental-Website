@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaBrain, FaHeart, FaUsers, FaHandHoldingHeart, FaComments, FaCalendarAlt, FaQuoteLeft } from 'react-icons/fa';
+import { FaBrain, FaHeart, FaUsers, FaHandHoldingHeart, FaComments, FaCalendarAlt, FaQuoteLeft, FaHandsHelping } from 'react-icons/fa';
 import bannerImage from '../images/banner1.svg';
 
 const Home = () => {
@@ -96,22 +96,23 @@ const Home = () => {
       }}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-[#F7FAF9] mb-6 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+            <h1 className="text-5xl md:text-6xl font-bold text-[#F7FAF9] mb-6 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] text-shadow-[0_0_2px_#000,0_0_2px_#000,0_0_2px_#000,0_0_2px_#000]">
               You Are Not Alone
             </h1>
-            <p className="text-xl md:text-2xl text-[#AEE3CF] mb-8 max-w-3xl mx-auto drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+            <p className="text-xl md:text-2xl text-[#AEE3CF] mb-8 max-w-3xl mx-auto drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] text-shadow-[0_0_2px_#000,0_0_2px_#000,0_0_2px_#000,0_0_2px_#000]">
               A safe space for mental health support, resources, and healing. Your journey to wellness starts here.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link to="/counseling" className="px-8 py-4 bg-[#4F8EA3] hover:bg-[#2F5D73] text-[#F7FAF9] rounded-lg font-semibold text-lg transition-colors flex items-center gap-2">
+              <Link to="/counseling" className="px-8 py-4 bg-[#457d90] hover:bg-[#2F5D73] text-[#F7FAF9] rounded-lg font-semibold text-lg transition-colors flex items-center gap-2 border border-[#AEE3CF]">
                 <FaCalendarAlt />
                 Schedule Counseling
               </Link>
-              <Link to="/forums" className="px-8 py-4 bg-[#7FA97F] hover:bg-[#2F5D73] text-[#F7FAF9] rounded-lg font-semibold text-lg transition-colors flex items-center gap-2">
+              <Link to="/forums" className="px-8 py-4 bg-[#7FA97F] hover:bg-[#2F5D73] text-[#F7FAF9] rounded-lg font-semibold text-lg transition-colors flex items-center gap-2 border border-[#AEE3CF]">
                 <FaComments />
                 Join Community
               </Link>
-              <Link to="/help" className="px-8 py-4 bg-red-600 hover:bg-red-700 text-[#F7FAF9] rounded-lg font-semibold text-lg transition-colors">
+              <Link to="/help" className="px-8 py-4 bg-red-700 hover:bg-red-800 text-[#F7FAF9] rounded-lg font-semibold text-lg transition-colors flex items-center gap-2 border border-[#AEE3CF]">
+                <FaHandsHelping />
                 Get Help Now
               </Link>
             </div>

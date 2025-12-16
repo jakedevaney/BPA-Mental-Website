@@ -111,8 +111,8 @@ const Help = () => {
         style={{
             backgroundImage: `url(${bannerImage})`
         }}>
-          <h1 className="text-6xl font-bold text-[#F7FAF9] mb-3 text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Get Help Now</h1>
-          <p className="text-[#AEE3CF] text-lg text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">You're not alone. Help is available 24/7.</p>
+          <h1 className="text-6xl font-bold text-[#F7FAF9] mb-3 text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] text-shadow-[0_0_2px_#000,0_0_2px_#000,0_0_2px_#000,0_0_2px_#000]">Get Help Now</h1>
+          <p className="text-[#AEE3CF] text-lg text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,1)] text-shadow-[0_0_2px_#000,0_0_2px_#000,0_0_2px_#000,0_0_2px_#000]">You're not alone. Help is available 24/7.</p>
         </div>
 
         {/* Emergency Warning */}
